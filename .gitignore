@@ -1,109 +1,43 @@
-##############################
-# Ignore generic BUILD files #
-##############################
-bin/*
-/bin
-*.class
-./target
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
-public/javascripts/min
-public/stylesheets/*.css
+# dependencies
+/node_modules
+/.pnp
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
 
-########
-# Node #
-########
-node_modules
-npm-debug.log
+# testing
+/coverage
 
-#################
-# Bower modules #
-#################
-bower_components
+# next.js
+/.next/
+/out/
 
-####################
-# grunt temp files #
-####################
-.grunt
+# production
+/build
 
-####################
-# Windows OS stuff #
-####################
-Thumbs.db
-Desktop.ini
-
-#################
-# MAC OSX stuff #
-#################
+# misc
 .DS_Store
+*.pem
 
-################
-# Git specific #
-################
-# This files allows "git daemon" to export the current repository
-# It should be ignored so that the current developer can choose to effectively share the repository or not
-git-daemon-export-ok
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
 
-########
-# SASS #
-########
-# D.HSC: Do not ignore sass output files for now because we haven't setup SASS compilation on test and prod environments 
-# style-sass.css
-# but we should ignore the sass cache folders
-.sass-cache
+# env files (can opt-in for committing if needed)
+.env*
 
-########################
-# Tomcat related files #
-########################
-# ignore META-INF folder
-META-INF/
+# vercel
+.vercel
 
-################
-# Text editors #
-################
-*.bak
-*.lnk
-*.tmp
-*.marks
-.project
-*.project
-*.classpath
-*.iml
-*.marks
-.idea/*
-.metadata/*
-.settings/*
-.externalToolBuilders/*
-*~
-*.swp
-# Ignore Sublime editor config files
-*.sublime-workspace
-*.sublime-project
-# ignore "sublime text 2" temp files
-*#
+# typescript
+*.tsbuildinfo
+next-env.d.ts
 
-#########################################
-# More custom linux editor ignore rules #
-#########################################
-# /home/cb/.gitignore-boilerplates/Global/Emacs.gitignore
-*~
-\#*\#
-/.emacs.desktop
-/.emacs.desktop.lock
-.elc
-auto-save-list
-tramp
-.\#*
-
-# Org-mode
-.org-id-locations
-*_archive
-
-### /home/cb/.gitignore-boilerplates/Global/vim.gitignore
-.*.s[a-w][a-z]
-*.un~
-Session.vim
-.netrwhist
-*~
-# D.HSC: Do not ignore 'tags' because that's where the JSP custom tags are
-# tags 
-# TAGS
+.eslintcache

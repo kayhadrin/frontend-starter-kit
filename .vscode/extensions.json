@@ -1,0 +1,20 @@
+{
+  "recommendations": [
+    "alefragnani.bookmarks",
+    "dsznajder.es7-react-js-snippets",
+    "ms-vscode-remote.remote-containers",
+    "esbenp.prettier-vscode",
+    "yoavbls.pretty-ts-errors",
+    "bradlc.vscode-tailwindcss",
+    "pmneo.tsimporter",
+    "christian-kohler.path-intellisense",
+    "christian-kohler.npm-intellisense",
+    "bierner.markdown-preview-github-styles",
+    "kontrail.vscode-inline-svg",
+    "ecmel.vscode-html-css",
+    "mhutchie.git-graph",
+    "editorconfig.editorconfig",
+    "adpyke.codesnap",
+    "atishay-jain.all-autocomplete"
+  ]
+}

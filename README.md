@@ -1,25 +1,21 @@
-# Task description
+# Frontend starter kit
 
-TBD
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-# Setup instructions
+## Getting Started
 
-From the root folder of this repository:
+Pre-requirements:
 
-````shell
-bundle install
-npm install
-# Start server
-./scripts/server.sh
-# Open your browser on http://localhost:2048/
-````
+1. node v22 (nvm recommended)
+2. pnpm
+3. Chrome, Edge or Firefox recommended
 
-# Dev instructions
+First, run the development server:
 
-````shell
-# Start server in debug mode
-./scripts/server.sh debug
-#
-# You can watch source file changes with:
-./scripts/watch_source.sh debug
-````
+```bash
+nvm use
+pnpm install
+pnpm dev
+```
+
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.

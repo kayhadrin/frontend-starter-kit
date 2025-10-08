@@ -1,35 +1,58 @@
 {
-	"name": "frontend-test",
-	"description": "tbd",
-	"version": "0.0.1",
-	"engines": {
-		"node": "0.10.x",
-		"npm": "1.2.x"
-	},
-	"private": true,
-	"//unused dependencies": {
-		"grunt-cli": "*",
-		"fs-extra": "*",
-		"requirejs": "~2.1.8",
-		"grunt-contrib-requirejs": "~0.4.1",
-		"grunt-contrib-jasmine": "*",
-		"grunt-template-jasmine-istanbul": "*",
-		"grunt-template-jasmine-requirejs": "*",
-		"underscore": "*",
-		"jsdoc": "git://github.com/jsdoc3/jsdoc.git"
-	},
-	"dependencies": {
-		"grunt": "*",
-		"grunt-contrib-watch": "*",
-		"grunt-contrib-compass": "*",
-		"grunt-contrib-connect": "*",
-		"grunt-contrib-clean": "*",
-		"grunt-contrib-uglify": "*",
-		"grunt-connect-proxy": "~0.1.6"
-	},
-	"scripts": {
-		"test": "grunt test && grunt clean --force"
-	},
-	"scripts.preinstall": "npm install -g grunt-cli",
-	"devDependencies": {}
+  "name": "frontend-starter-kit",
+  "version": "1.0.0",
+  "lint-staged": {
+    "**/*.{js,ts,jsx,tsx,scss}": [
+      "prettier --write"
+    ]
+  },
+  "private": true,
+  "type": "module",
+  "license": "UNLICENSED",
+  "engines": {
+    "node": "v22"
+  },
+  "scripts": {
+    "dev": "WATCHPACK_POLLING=750 next dev",
+    "format": "prettier --write .",
+    "build": "next build",
+    "start": "next start",
+    "lint": "npm-run-all --parallel lint:*",
+    "lint:js": "eslint --concurrency auto --cache --max-warnings=0",
+    "lint:format": "prettier --cache --check .",
+    "lint-n-test": "npm-run-all --parallel lint:* test:*",
+    "test": "npm-run-all --parallel test:*",
+    "//test:jest": "pnpm jest",
+    "test:types": "tsc",
+    "postinstall": "next telemetry disable"
+  },
+  "dependencies": {
+    "invariant": "^2.2.4",
+    "next": "^15.5.4",
+    "nullthrows": "^1.1.1",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3",
+    "@ianvs/prettier-plugin-sort-imports": "^4.4.2",
+    "@tailwindcss/postcss": "^4",
+    "@types/invariant": "^2.2.37",
+    "@types/jest": "^30.0.0",
+    "@types/node": "^22",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "^15",
+    "eslint-config-prettier": "^10.1.8",
+    "jest": "^30.0.2",
+    "jest-environment-jsdom": "^30.0.2",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^3.6.2",
+    "prettier-plugin-tailwindcss": "^0.6.12",
+    "tailwindcss": "^4",
+    "ts-node": "^10.9.2",
+    "typescript": "^5",
+    "typescript-eslint": "^8.38.0"
+  }
 }
