@@ -119,7 +119,8 @@ RUN chown -R ubuntu:ubuntu ./app
 # Use node version as per the .nvmrc file
 RUN nvm install $(cat ~/app/.nvmrc)
 RUN nvm use $(cat ~/app/.nvmrc)
-RUN npm install -g yarn
+RUN npm install -g corepack@latest
+# The node package manager will be installed by setup.sh
 
 # Setup bash and other CLI tools
 RUN ./app/.devcontainer/cli_helpers/setup.sh

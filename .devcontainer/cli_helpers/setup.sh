@@ -33,3 +33,6 @@ fi
 . "$CLI_HELPERS_DIR/git_prompt.sh"
 
 EOM
+
+# Install the configured package manager defined by package.json
+cd $HOME/app && corepack install
