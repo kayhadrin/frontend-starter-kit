@@ -1,0 +1,33 @@
+####
+# Ignore some generated files when copying the initial git repo to the Docker volume.
+# This is useful mainly if you've been using the git repo locally (host machine) before using a Docker devcontainer.
+#
+# See https://docs.docker.com/build/concepts/context/#dockerignore-files
+####
+.env.local
+# dependencies
+node_modules
+
+# testing
+# coverage
+
+# Builds
+.next/
+
+# production
+build
+# vercel
+.vercel
+
+# misc
+.DS_Store
+*.pem
+.idea
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# local env files
+.env
+.env.local

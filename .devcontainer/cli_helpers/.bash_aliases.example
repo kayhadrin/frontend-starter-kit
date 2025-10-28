@@ -1,0 +1,14 @@
+alias ll='ls -alh'
+
+alias g='git'
+alias gb='git branch'
+alias gbr='git br'
+alias gs='git status'
+alias gc='git commit'
+
+# git log graph showing commit hash, date and message
+alias gl='git gl'
+# git log graph showing hash, time, author and commit message
+alias lg='lg1'
+alias lg1='git lg1'
+alias lg2='git lg2'
